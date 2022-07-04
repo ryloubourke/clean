@@ -6,6 +6,29 @@ date: 2022-07-4 15:45:13 -0400
 background: '/img/posts/handshake.jpg'
 ---
 
+<script lang="java">
+    	import java.util.Scanner;
+
+public class LoanCalculator
+{
+ public static void main(String[] args) {
+  System.out.println("Enter loan amount");
+  Scanner scanner = new Scanner(System.in);
+  int amount = scanner.nextInt();
+  int monthly = amount;
+  int subtract = monthly / 10; 
+  int paymentNum = 1; 
+
+  do {
+	paymentNum++;
+	monthly -= subtract;
+	subtract = monthly / 10;
+  }while(paymentNum <= 3);
+  System.out.println(monthly);
+ }
+}
+    </script>
+
 <p>I have been teaching myself Java through an app called SoloLearn. Yesterday I was given a prompt to create a program that takes the amount of a loan from a friend and outputs the total amount left after 3 months and 10% interest a month.</p>
 
 <p>I took the instructions a little too literally and created an output showing what 10% of each payment and the amount left after each month. </p>
